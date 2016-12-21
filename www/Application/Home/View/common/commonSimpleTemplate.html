@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<title>Whaley Info</title>
+
+<meta name="description" content="overview &amp; stats" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--basic styles-->
+
+<link href="/Public/assets/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/Public/assets/css/bootstrap-responsive.min.css"
+	rel="stylesheet" />
+<link rel="stylesheet" href="/Public/assets/css/font-awesome.min.css" />
+
+
+<link rel="stylesheet" href="/Public/assets/css/ace.min.css" />
+<link rel="stylesheet" href="/Public/assets/css/ace-responsive.min.css" />
+<link rel="stylesheet" href="/Public/assets/css/ace-skins.min.css" />
+<link rel="stylesheet" href="/Public/assets/css/loading.css" />
+
+<style type="text/css">
+	 .form-horizontal .control-group{
+	 	margin-bottom: 6px;
+	 }
+	 
+	 .input_text { height: 20px; width: 120px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: none; border-right-style: none; border-bottom-style: solid; border-left-style: none; border-top-color: #666666; border-right-color: #666666; border-bottom-color: #666666; border-left-color: #666666; }
+</style>
+<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="/Public/assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+<!--inline styles related to this page-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div id="background" class="background" style="display: none; "></div> 
+<div id="datagrid-mask-msg" class="datagrid-mask-msg" style="margin-left: -91.5px; display: none; left: 50%;">正在加载，请稍等...</div>
+	<div class="main-container container-fluid">
+		<a class="menu-toggler" id="menu-toggler" href="#"> <span
+			class="menu-text"></span>
+		</a>
+
+		<block name="main_content"></block>
+		
+	</div>
+	<!--/.main-container-->
+
+	<!--basic scripts-->
+
+	<!--[if !IE]>-->
+
+	<script
+		src="/Public/js/jquery-1.7.2.min.js"></script>
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+<script src="http://ajax.useso.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+	<!--[if !IE]>-->
+
+	<script type="text/javascript">
+		window.jQuery
+				|| document
+						.write("<script src='/Public/js/jquery-1.7.2.min.js'>"
+								+ "<" + "/script>");
+	</script>
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='/Public/assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+	<script type="text/javascript">
+		if ("ontouchend" in document)
+			document
+					.write("<script src='/Public/assets/js/jquery.mobile.custom.min.js'>"
+							+ "<" + "/script>");
+	</script>
+	<script src="/Public/assets/js/bootstrap.min.js"></script>
+
+	<!--page specific plugin scripts-->
+
+	<!--[if lte IE 8]>
+		  <script src="/Public/assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+	<script src="/Public/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="/Public/assets/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="/Public/assets/js/jquery.slimscroll.min.js"></script>
+	<script src="/Public/assets/js/jquery.easy-pie-chart.min.js"></script>
+	<script src="/Public/assets/js/jquery.sparkline.min.js"></script>
+	<script src="/Public/assets/js/flot/jquery.flot.min.js"></script>
+	<script src="/Public/assets/js/flot/jquery.flot.pie.min.js"></script>
+	<script src="/Public/assets/js/flot/jquery.flot.resize.min.js"></script>
+	<script src="/Public/js/loading.js"></script>
+	<!--ace scripts-->
+	<block name="inner_script"></block>
+	<!--inline scripts related to this page-->
+
+</body>
+
+</html>

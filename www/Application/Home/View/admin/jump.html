@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>微鲸权限</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/Public/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/Public/assets/css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="/Public/assets/css/fullcalendar.css" />
+<link rel="stylesheet" href="/Public/assets/css/matrix-style.css" />
+<link rel="stylesheet" href="/Public/assets/css/matrix-media.css" />
+<!-- <link
+	href='http://fonts.useso.com/css?family=Open+Sans:400,700,800'
+	rel='stylesheet' type='text/css' />
+	 -->
+</head>
+<body>
+
+	<!--Header-part-->
+	<div id="header" style="font-size: 27px">
+		<br> <i style="color: #69aa46;" class="icon-leaf green"></i> <span
+			style="color: #dd5a43;">微鲸</span> <span class="white">系统</span>
+	</div>
+	<!--close-Header-part-->
+
+
+	<!--top-Header-menu-->
+	<div id="user-nav" class="navbar navbar-inverse">
+		<ul class="nav">
+			<li class="dropdown" id="profile-messages"><a title="" href="#"
+				data-toggle="dropdown" data-target="#profile-messages"
+				class="dropdown-toggle"><i class="icon icon-user"></i> <span
+					class="text">欢迎您:{$username}</span></a>
+			</li>
+			<li class=""><a id="logout" title="" href="#"><i
+					class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+			<li class="dropdown" id="profile-messages">
+				<a style="color:blue;" href="/Auth/updatePassword">重置密码</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 隐藏域 -->
+     <div class="control-group" style="display:none">
+         <input type="text"  id="user_id" value="{$username}">
+	 </div>
+	<!--close-top-Header-menu-->
+
+	<!--sidebar-menu-->
+	<div id="sidebar">
+		<a href="#" class="visible-phone"><i class="icon icon-home"></i>
+			Dashboard</a>
+		<ul>
+			<li class="active"><a href="#"><i
+					class="icon icon-home"></i> <span>进入相关系统</span></a></li>
+					
+		   <volist name="lst_user_rule" id="rules"
+									empty="您没有权限，请联系管理员">
+			<li class="submenu"><a href="{$rules.default_url}"> 
+			   <i class="icon icon-inbox"></i>
+					<span>{$rules.menu_domain_desc}</span> 
+			   </a>
+	        </li>			
+			</volist>		
+					
+		</ul>
+	</div>
+	<!--sidebar-menu-->
+
+	<!--main-container-part-->
+	<div id="content">
+		<!--breadcrumbs-->
+		<div id="content-header">
+			<div id="breadcrumb">
+				<a href="index.html" title="Go to Home" class="tip-bottom"><i
+					class="icon-home"></i> 进入相关系统</a>
+			</div>
+		</div>
+		<!--End-breadcrumbs-->
+
+		<!--Action boxes-->
+		<div class="container-fluid">
+			<div class="quick-actions_homepage">
+				<ul class="quick-actions">
+				
+				 <volist name="lst_user_rule" id="rules"
+									empty="您没有权限，请联系管理员">
+					<li class="bg_ly">
+						<a href="{$rules.default_url}"> <i
+							class="icon-inbox"></i>{$rules.menu_domain_desc}
+					    </a>
+					</li>			
+					</volist>
+				
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="/Public/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="/Public/js/ajaxService.js"></script>
+	<script type="text/javascript" src="/Public/js/common.js"></script>
+	<include file="common:server_config" />
+</body>
+</html>
+
+

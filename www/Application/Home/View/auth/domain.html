@@ -1,0 +1,86 @@
+<extend name="common:commonTemplate" />
+<block name="main_content">
+<div id="content">
+	<div id="content-header">
+		<div id="breadcrumb">
+			<a class="tip-bottom" href="index.html"
+				data-original-title="Go to Home"><i class="icon-home"></i> 首页</a>
+			<a href="#">权限管理</a> <a class="current" href="#">domain管理</a>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="widget-box">
+					<div class="widget-title">
+						<span class="icon"> <i class="icon-info-sign"></i>
+						</span>
+						<h5>搜索条件</h5>
+					</div>
+					<div class="widget-content nopadding">
+						<form novalidate="novalidate" id="basic_validate"
+							name="basic_validate" action="#" method="post"
+							class="form-horizontal">
+							<div class="control-group">
+								<label class="control-label">系统名称：</label>
+								<div class="controls">
+									<input type="text" id="domain_name" name="required">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">域：</label>
+								<div class="controls">
+									<input type="text" id="domain_url" name="required">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">domain id：</label>
+								<div class="controls">
+									<input type="text" id="domain_id" name="required">
+								</div>
+							</div>
+							<div class="form-actions">
+								<input id="btn_search" type="button" class="btn btn-success" value="搜索">
+								
+								<input id="btn_add" style="background:red" onclick="location.href='/auth/adddomain'" type="button" class="btn btn-success" value="新增">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<div class="row-fluid">
+      <div class="span12">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
+            <h5>搜索结果</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <table id="search_result" page_index="1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>domain id</th>
+                  <th>系统名称</th>
+                  <th>域</th>
+                  <th>默认跳转链接</th>
+                  <th>操作<th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+
+      </div>
+    </div>
+	
+	</div>
+
+
+</div>
+</block>
+
+<block name="js_content">
+<script src="/Public/js/domain.js"></script>
+</block>

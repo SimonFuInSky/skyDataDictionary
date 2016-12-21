@@ -1,0 +1,113 @@
+<extend name="common:commonTemplate" />
+<block name="main_content">
+<div id="content">
+	<div id="content-header">
+		<div id="breadcrumb">
+			<a class="tip-bottom" href="index.html"
+				data-original-title="Go to Home"><i class="icon-home"></i> 首页</a>
+			<a href="#">权限管理</a> <a class="current" href="#">页面资源管理</a>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="widget-box">
+					<div class="widget-title">
+						<span class="icon"> <i class="icon-info-sign"></i>
+						</span>
+						<h5>搜索条件</h5>
+					</div>
+					<div class="widget-content nopadding">
+						<form novalidate="novalidate" id="basic_validate"
+							name="basic_validate" action="#" method="post"
+							class="form-horizontal">
+							<div class="control-group">
+								<label class="control-label">菜单ID：</label>
+								<div class="controls">
+									<input type="text" id="menu_id" name="menu_id">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">菜单名称：</label>
+								<div class="controls">
+									<input type="text" id="menu_name" name="menu_name">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">菜单域：</label>
+								<div class="controls">
+									<select id="menu_domain" >
+									   <option value="">---请选择---</option>
+									   <volist name="lst_menu_domain" id="parent_domain">
+											<option value="{$parent_domain.domain_url}">{$parent_domain.domain_name}</option>
+										</volist>
+									</select>
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label">父节点</label>
+								<div class="controls">
+								<select id="parent_id" >
+									<option value="">---请选择---</option>
+								   	<volist name="lst_menu_resource" id="parent_menu">
+										<option value="{$parent_menu.menu_id}">{$parent_menu.menu_name}</option>
+									</volist>
+								</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">页面等级：</label>
+								<div class="controls">
+									<select id="level" >
+										<option value="">-----全部-----</option>
+										<option value="1">一级菜单</option>
+										<option value="2">二级菜单</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-actions">
+								<input id="btn_search" type="button" class="btn btn-success" value="搜索">
+								<input id="btn_add" style="background:red" onclick="location.href='/auth/addmenuresource'" type="button" class="btn btn-success" value="新增">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="row-fluid">
+      <div class="span12">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
+            <h5>搜索结果</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <table id="search_result" page_index="1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>菜单ID</th>
+                  <th>菜单名称</th>
+                  <th>菜单域</th>
+                  <th>菜单域描述</th>
+                  <th>菜单链接</th>
+                  <th>父节点Id</th>
+                  <th>父节点名称</th>
+                  <th>页面等级</th>
+                  <th>默认url跳转</th>
+                  <th>是否显示</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+	</div>
+</div>
+</block>
+
+<block name="js_content">
+<script src="/Public/js/menuResource.js"></script>
+</block>

@@ -1,0 +1,148 @@
+<extend name="common:commonTemplate" />
+<block name="main_content">
+<div id="content">
+	<div id="content-header">
+		<div id="breadcrumb">
+			<a class="tip-bottom" href="index.html"
+				data-original-title="Go to Home"><i class="icon-home"></i> 首页</a> <a
+				href="#">权限管理</a> <a class="current" href="#">新增group</a>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="widget-box">
+					<div class="widget-title">
+						<span class="icon"> <i class="icon-info-sign"></i>
+						</span>
+						<h5>group信息</h5>
+					</div>
+					<div class="widget-content nopadding">
+						<form novalidate="novalidate" id="basic_validate"
+							name="basic_validate" action="#" method="post"
+							class="form-horizontal">
+							<div class="control-group">
+								<label class="control-label">group名称</label>
+								<div class="controls">
+									<input type="text" id="group_name" name="sku_sn"/>
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label">group描述</label>
+								<div class="controls">
+									<input type="text" id="group_desc" name="sku_sn"/>
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label">添加页面</label>
+								<div class="controls">
+									<input type="text" id="group_menu_relation_text" readonly="readonly" />
+									<input type="hidden" id="hidden_menu_relation_text" />
+									<a id="add_group_menu_relation" class="btn btn-success">选择页面</a> 
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label">添加用户</label>
+								<div class="controls">
+									<input type="text" id="group_user_relation_text" readonly="readonly"/>
+									<input type="hidden" id="hidden_user_relation_text" />
+									<a id="add_group_user_relation" class="btn btn-success">选择用户</a> 
+								</div>
+							</div>
+							
+							
+							<div class="control-group">
+								<a id="btn_add" class="btn btn-success">新增分组</a> 
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+
+<block name="js_content"> 
+<script>
+//新增商品
+AddGroupPage = {
+		'BindEvent': function(){
+			$('#btn_add').bind('click', function(){
+				var group_name = $('#group_name').val();
+				var group_desc = $('#group_desc').val();
+				if(group_name==''){
+					alert("group不能为空");
+					return;
+				}
+				if(group_desc==''){
+					alert("group描述不能为空");
+					return;
+				}
+				
+				var menu_relation =  $('#hidden_menu_relation_text').val();
+				var user_relation =  $('#hidden_user_relation_text').val();
+				
+				if(menu_relation==''){
+					alert("菜单不能为空");
+					return;
+				}
+				
+				if(user_relation==''){
+					alert("用户不能为空");
+					return;
+				}
+				
+				var result = AuthService.addgroup(group_name,group_desc,menu_relation,user_relation);
+				if (result.IsSuccess == 0) {
+					alert(result.ErrorMsg);
+					return;
+				} else {
+					alert('新增成功');
+				}
+			});			
+			$('#add_group_menu_relation').bind('click', function(){
+				
+				layer.open({
+			        type: 2,
+			        title: '新增页面关系',
+			        fix: true,
+			        shadeClose: true,
+			        maxmin: true,
+			        area: ['1000px', '500px'],
+			        content: '/auth/menugrouprelation',
+			        end: function(){
+			            layer.tips('绑定成功', '#photosDemo', {tips: 1})
+			        }
+			    });
+ 
+			});
+			
+          $('#add_group_user_relation').bind('click', function(){
+				layer.open({
+			        type: 2,
+			        title: '新增用户关系',
+			        fix: true,
+			        shadeClose: true,
+			        maxmin: true,
+			        area: ['1000px', '500px'],
+			        content: '/auth/usergrouprelation',
+			        end: function(){
+			            layer.tips('绑定成功', '#photosDemo', {tips: 1})
+			        }
+			    });
+ 
+			});
+		} 
+}
+ 
+$(document).ready(function(){
+	AddGroupPage.BindEvent();
+});
+
+</script>
+<script src="/Public/assets/js/layer/layer.js"></script>
+ </block>

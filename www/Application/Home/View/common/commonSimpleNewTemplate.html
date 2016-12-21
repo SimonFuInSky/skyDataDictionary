@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{$page_name}</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/Public/assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/Public/assets/css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" href="/Public/assets/css/fullcalendar.css"/>
+    <link rel="stylesheet" href="/Public/assets/css/matrix-style.css"/>
+    <link rel="stylesheet" href="/Public/assets/css/matrix-media.css"/>
+    <link rel="stylesheet" href="/Public/assets/css/jquery.gritter.css"/>
+    <!--<link rel="stylesheet" href="/Public/assets/css/select2.css"/>-->
+    <link href="/Public/assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="/Public/css/jquery.gritter.css"/>
+	<link rel="stylesheet" href="/Public/assets/css/loading.css" />
+</head>
+<body>
+<!--close-top-Header-menu-->
+<!-- 隐藏域 -->
+<div id="background" class="background" style="display: none; "></div> 
+<div id="datagrid-mask-msg" class="datagrid-mask-msg" style="margin-left: -91.5px; display: none; left: 50%;">正在加载，请稍等...</div>
+<div class="control-group" style="display:none">
+    <input type="text" id="user_id" value="{$user_id}">
+</div>
+
+<!--sidebar-menu-->
+<block name="main_content"></block>
+
+<script type="text/javascript" src="/Public/assets/js/jquery.min.js"></script>
+<script src="/Public/assets/js/jquery.ui.custom.js"></script>
+<script src="/Public/assets/js/bootstrap.min.js"></script>
+<script src="/Public/assets/js/jquery.uniform.js"></script>
+<script src="/Public/assets/js/jquery.dataTables.min.js"></script>
+<script src="/Public/assets/js/matrix.js"></script>
+<script src="/Public/js/ajaxService.js"></script>
+<script src="/Public/js/loading.js"></script>
+<script type="text/javascript" src="/Public/js/login.js"></script>
+<include file="common:server_config"/>
+<script>
+    var module_id = '{$module_id}';
+    var page_id = '{$page_id}';
+    var page_name = '{$page_name}';
+</script>
+<block name="js_content"></block>
+</body>
+</html>
