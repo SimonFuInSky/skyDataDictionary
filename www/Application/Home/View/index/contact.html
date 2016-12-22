@@ -1,0 +1,143 @@
+<extend name="common:themeBoxTemplate" />
+<block name="content-area">
+    <!-- BREADCRUMBS -->
+    <section class="page-section breadcrumbs">
+        <div class="container">
+            <div class="row breadcrumbs-row">
+                <div class="col-xs-8 col-xs-push-2 col-md-4 col-md-push-4 col-page-header">
+                    <div class="page-header">
+                        <h1>联系我们</h1>
+                    </div>
+                </div>
+                <div class="col-xs-8 col-xs-push-2 col-md-4 col-md-pull-4 col-md-push-0 col-breadcrumb">
+                    <ul class="breadcrumb">
+                        <li><i class="fa fa-home"></i> - </li>
+                        <li>联系</li>
+                    </ul>
+                </div>
+                <div class="col-xs-2 col-xs-push-2 col-md-4 col-md-push-0 col-search">
+                    <div class="breadcrumbs-search">
+                        <span class="breadcrumbs-search-btn" data-toggle="modal" data-target="#popup-search"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /BREADCRUMBS -->
+
+    <!-- PAGE -->
+    <section class="page-section light">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="contact-info">
+
+                        <div class="media-list">
+                            <div class="media">
+                                <i class="pull-left fa fa-phone"></i>
+                                <div class="media-body">
+                                    <strong>(86)186-1636-8591</strong><br>
+                                    通过电话联系
+                                </div>
+                            </div>
+                            <div class="media">
+                                <i class="pull-left fa fa-envelope"></i>
+                                <div class="media-body">
+                                    <strong>176223450@163.com</strong><br>
+                                    通过email联系
+                                </div>
+                            </div>
+                            <div class="media">
+                                <i class="pull-left fa fa-commenting"></i>
+                                <div class="media-body">
+                                    <strong>微信联系</strong><br>
+                                    用即时工具联系我们
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-8 text-left">
+
+                    <!-- Contact form -->
+                    <div class="contact-form-inner">
+
+                        <h2 class="block-title">
+                            请填下您的反馈
+                            <small>我们会有专人跟进您的反馈意见，请留下您的联系方式。</small>
+                        </h2>
+
+                        <form name="contact-form" method="post" action="#" class="contact-form" id="contact-form">
+
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    <div class="outer required">
+                                        <div class="form-group af-inner">
+                                            <label class="sr-only" for="name">Name</label>
+                                            <input
+                                                    type="text" name="name" id="name" placeholder="Name" value="" size="30"
+                                                    data-toggle="tooltip" title="Name is required" required
+                                                    class="form-control placeholder"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-6">
+
+                                    <div class="outer required">
+                                        <div class="form-group af-inner">
+                                            <label class="sr-only" for="email">Email</label>
+                                            <input
+                                                    type="email" name="email" id="email" placeholder="Email" value="" size="30"
+                                                    data-toggle="tooltip" title="Email is required" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                                    class="form-control placeholder"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="outer required">
+                                <div class="form-group af-inner">
+                                    <label class="sr-only" for="input-message">Message</label>
+                                    <textarea
+                                            name="message" id="input-message" placeholder="Message" rows="4" cols="50"
+                                            data-toggle="tooltip" title="Message is required" required
+                                            class="form-control placeholder"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="outer required">
+                                <div class="form-group no-margin af-inner">
+                                    <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-dark" id="submit_btn" value="立刻提交" />
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- /Contact form -->
+
+                </div>
+
+            </div>
+
+            <!-- Google map -->
+            <div class="google-map-inner">
+                我们的地址：
+                <div class="google-map">
+                    <div id="map-canvas"></div>
+                </div>
+            </div>
+            <!-- /Google map -->
+
+        </div>
+    </section>
+    <!-- /PAGE -->
+
+
+</block>

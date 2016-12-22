@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Sky DataDictionary</title>
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/Public/themebox/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="shortcut icon" href="/Public/themebox/ico/favicon.ico">
+
+	<!-- CSS Global -->
+	<link href="/Public/themebox/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/Public/themebox/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="/Public/themebox/plugins/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/Public/themebox/plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet">
+	<link href="/Public/themebox/plugins/owl-carousel2/themebox/owl.carousel.min.css" rel="stylesheet">
+	<link href="/Public/themebox/plugins/owl-carousel2/themebox/owl.theme.default.min.css" rel="stylesheet">
+	<link href="/Public/themebox/plugins/animate/animate.min.css" rel="stylesheet">
+	<link href="/Public/themebox/plugins/swiper/css/swiper.min.css" rel="stylesheet">
+
+	<!-- Theme CSS -->
+	<link href="/Public/themebox/css/theme.css" rel="stylesheet">
+	<link href="/Public/themebox/css/theme-color.css" rel="stylesheet" id="theme-config-link">
+
+	<!-- Head Libs -->
+	<script src="/Public/themebox/plugins/modernizr.custom.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="/Public/themebox/plugins/iesupport/html5shiv.js"></script>
+	<script src="/Public/themebox/plugins/iesupport/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body id="home" class="wide">
+<!-- PRELOADER -->
+<div id="preloader">
+	<div id="preloader-status">
+		<div class="spinner">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+			<div class="rect4"></div>
+			<div class="rect5"></div>
+		</div>
+		<div id="preloader-title">Loading</div>
+	</div>
+</div>
+<!-- /PRELOADER -->
+
+<!-- WRAPPER -->
+<div class="wrapper">
+
+	<!-- Popup: Login -->
+	<div class="modal fade popup-login" id="popup-login" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="container">
+
+				<div class="popup-login-items">
+					<div class="popup-login-items-inner">
+
+						<form action="#" class="form-login">
+							<div class="row">
+								<div class="col-md-12 hello-text-wrap">
+									<span class="hello-text text-thin">欢迎登陆您的账户！</span>
+								</div>
+								<div class="col-md-12">
+									<a class="btn btn-theme btn-block btn-icon-left facebook" href="#" data-dismiss="modal"><i class="fa fa-facebook"></i>使用QQ登陆</a>
+								</div>
+								<div class="col-md-12">
+									<a class="btn btn-theme btn-block btn-icon-left facebook" href="#" data-dismiss="modal"><i class="fa fa-facebook"></i>使用微信登陆</a>
+								</div>
+								<div class="col-md-12">
+									<a class="btn btn-theme btn-block btn-icon-left twitter" href="#" data-dismiss="modal"><i class="fa fa-twitter"></i>使用微博登陆</a>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group"><input class="form-control" type="text" placeholder="输入您的账户"></div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group"><input class="form-control" type="password" placeholder="输入您的密码"></div>
+								</div>
+								<div class="col-md-12 col-lg-6">
+									<div class="checkbox">
+										<input id="chk_remberme" type="checkbox"><label for="chk_remberme"> 7天内记住我</label>
+									</div>
+								</div>
+								<div class="col-md-12 col-lg-6 text-right-lg">
+									<a class="forgot-password" href="#">忘记密码?</a>
+								</div>
+								<div class="clear"></div>
+								<div class="col-md-6">
+									<a href="#" class="btn btn-theme btn-block btn-theme-dark" data-dismiss="modal">关闭</a>
+								</div>
+								<div class="col-md-6">
+									<a class="btn btn-theme btn-block btn-theme-green" href="#" data-dismiss="modal">登陆</a>
+								</div>
+							</div>
+						</form>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- /Popup: Login -->
+
+	<!-- Popup: Search -->
+	<div class="modal fade popup-search" id="popup-search" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="popup-close-button" data-dismiss="modal" data-target="#popup-search"><i class="fa fa-close"></i></div>
+			<div class="container">
+				<!-- Search form -->
+				<form action="#" class="form-search-templates">
+					<div class="form-group">
+						<label for="formSearchTemplatePopup" class="sr-only">键入您的搜索词</label>
+						<input type="text" class="form-control" id="formSearchTemplatePopup" placeholder="Type here to search a template">
+					</div>
+					<button type="submit" class="btn btn-submit btn-theme btn-theme-green">搜索</button>
+				</form>
+				<!-- Search form -->
+			</div>
+		</div>
+	</div>
+	<!-- /Popup: Search -->
+
+	<!-- HEADER -->
+	<header class="header fixed">
+		<div class="header-wrapper">
+			<div class="container">
+
+				<!-- Logo -->
+				<div class="logo">
+					<a href="index.html"><img src="/Public/themebox/img/logo-themebox.png" alt="ThemeBox"/></a>
+				</div>
+				<!-- /Logo -->
+
+				<!-- Mobile menu toggle button -->
+				<a href="#" class="menu-toggle btn btn-theme-transparent"><i class="fa fa-bars"></i></a>
+				<!-- /Mobile menu toggle button -->
+
+				<!-- Navigation -->
+				<nav class="navigation closed clearfix">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<!-- navigation menu -->
+							<a href="#" class="menu-toggle-close btn"><i class="fa fa-times"></i></a>
+							<ul class="nav sf-menu">
+								<li class="active"><a href="index.html">首页</a>
+									<ul>
+										<li><a href="index.html">Home 1</a></li>
+										<li><a href="index-2.html">Home 2</a></li>
+										<li><a href="index-3.html">Home 3</a></li>
+										<li><a href="index-4.html">Home 4</a></li>
+									</ul>
+								</li>
+								<li><a href="blog-right.html">支持</a>
+									<ul>
+										<li><a href="blog-right.html">Blog Sidebar Right</a></li>
+										<li><a href="blog-left.html">Blog Sidebar Left</a></li>
+										<li><a href="blog-post.html">Blog Single Post</a></li>
+									</ul>
+								</li>
+								<li class="sale"><a href="#">联系我们</a>
+									<ul>
+										<li><a href="contact.html">Contact</a></li>
+										<li><a href="support.html">Support</a></li>
+										<li><a href="error-page.html">404 page</a></li>
+									</ul>
+								</li>
+								<li>
+                                    <span class="sign-in-button icon">
+                                        <a href="#" class="" data-toggle="modal" data-target="#popup-login"><i class="fa fa-user"></i></a>
+                                    </span>
+								</li>
+							</ul>
+							<!-- /navigation menu -->
+						</div>
+					</div>
+					<!-- Add Scroll Bar -->
+					<div class="swiper-scrollbar"></div>
+				</nav>
+				<!-- /Navigation -->
+
+			</div>
+		</div>
+
+	</header>
+	<!-- /HEADER -->
+
+	<!-- CONTENT AREA -->
+	<div class="content-area">
+		<block name="content-area"></block>
+
+	</div>
+	<!-- /CONTENT AREA -->
+
+	<!-- FOOTER -->
+	<footer class="footer dark">
+		<div class="footer-widgets md-padding-top md-padding-bottom">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-3 col-sm-6">
+						<div class="widget widget-about">
+							<div class="logo--footer">
+								<a href="#"><img src="/Public/themebox/img/logo-themebox--footer.png" alt=""></a>
+							</div>
+							<p>数据词典是一个帮助程序员在线维护数据词典的功能性网站。
+								支持从数据库直接生成在线数据词典，亦可通过数据词典模板xls生成在线数据词典。
+								支持从在线数据词典生成sql建库建表语句，支持从在线数据词典生成xls。
+								目前完全免费。</p>
+						</div>
+
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="widget widget-categories">
+							<h4 class="widget-title">重要信息</h4>
+							<ul>
+								<li><a href="#">关于我们</a></li>
+								<li><a href="#">支持</a></li>
+								<li><a href="#">联系我们</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="widget widget-categories">
+							<h4 class="widget-title">友情链接</h4>
+							<ul>
+								<li><a href="#">Themeforest</a></li>
+								<li><a href="#">CodeCanyon</a></li>
+								<li><a href="#">AudioJungle</a></li>
+								<li><a href="#">VideoHive</a></li>
+								<li><a href="#">PhotoDune</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h4 class="widget-title">获取联系</h4>
+							<p>
+								<strong>Email:</strong> 176223450@qq.com <br>
+								<strong>Phone:</strong> +186-1636-8591
+							</p>
+							<ul class="social-icons">
+								<li><a href="#" class="weibo"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="footer-meta">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-sm-12">
+						<div class="copyright">&copy; Copyright 2016 <br> Designed by jThemes Studio</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /FOOTER -->
+
+	<div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
+
+</div>
+<!-- /WRAPPER -->
+
+<!-- JS Global -->
+<script src="/Public/themebox/plugins/jquery/jquery-1.11.1.min.js"></script>
+<script src="/Public/themebox/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/Public/themebox/plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="/Public/themebox/plugins/superfish/js/superfish.min.js"></script>
+<script src="/Public/themebox/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
+<script src="/Public/themebox/plugins/owl-carousel2/owl.carousel.min.js"></script>
+<script src="/Public/themebox/plugins/jquery.sticky.min.js"></script>
+<script src="/Public/themebox/plugins/jquery.easing.min.js"></script>
+<script src="/Public/themebox/plugins/jquery.smoothscroll.min.js"></script>
+<script src="/Public/themebox/plugins/swiper/js/swiper.jquery.min.js"></script>
+
+<!-- JS Page Level -->
+<script src="/Public/themebox/js/theme-ajax-mail.js"></script>
+<script src="/Public/themebox/js/theme.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="/Public/themebox/plugins/jquery.cookie.js"></script>
+<script src="/Public/themebox/js/theme-config.js"></script>
+<!--<![endif]-->
+
+</body>
+</html>
